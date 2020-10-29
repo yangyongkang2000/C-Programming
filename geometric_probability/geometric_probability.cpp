@@ -50,7 +50,10 @@ pow(y[2],2)))/(-4*(x[1] - x[2])*(y[0] - y[2]) + 4*(x[0] - x[2])*(y[1] \
 int main()
 {
   Solution s;
+  int n;
+  std::cout<<"Enter Number:\n";
+  std::cin>>n;
   clock_t start=clock();
-  std::cout<<s.gemotric_probability(1000000)<<"\ntime:"<<static_cast<double>(clock()-start)/(CLOCKS_PER_SEC)<<std::endl;
+  std::cout<<s.gemotric_probability(n)<<"\ntime:"<<static_cast<double>(clock()-start)/(CLOCKS_PER_SEC)<<std::endl;
 
 }
