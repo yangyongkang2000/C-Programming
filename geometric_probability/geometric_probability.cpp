@@ -53,6 +53,7 @@ int main()
   int n;
   std::cout<<"Enter Number:\n";
   std::cin>>n;
+  
   clock_t start=clock();
   std::cout<<s.gemotric_probability(n)<<"\ntime:"<<static_cast<double>(clock()-start)/(CLOCKS_PER_SEC)<<std::endl;
 
