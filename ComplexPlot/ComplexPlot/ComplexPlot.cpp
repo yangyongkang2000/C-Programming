@@ -8,23 +8,25 @@
 #include<complex>
 #include<array>
 #include "WolframImageLibrary.h"
-inline void ___(const std::complex<double> &z,raw_t_bit *out)
+template<typename data_type>
+inline void ___(const std::complex<double> &z,data_type *out)
 {
     using namespace std;
     using namespace std::complex_literals;
     complex<double> _z=(z-1.)*pow(z-1i,2.)*pow(z+1.,3.)/(z+1i);
+    if(abs(_z.real())<1e-322||abs(_z.imag())<1e-322)
+        return;
+    using T = array<unsigned char,3> ;
+    auto func=[&out](const T &rgb){copy(rgb.begin(), rgb.end(), out);};
     if(_z.real()>0)
-    {
-        out[_z.imag()>0?0:2]=1;
-    }else{
-        out[1]=1;
-        out[_z.imag()>0?0:1]=1;
-    }
+        func(_z.imag()>0?T{219,57,43}:T{30,68,124});
+    else
+        func(_z.imag()>0?T{241,229,57}:T{90,178,69});
 }
 namespace _Complex_Plot_
 {
-template<typename function_type>
-inline void complex_plot(raw_t_bit *out, const double *point_data, const mint &width, const mint &height,const double &eps,const function_type &func)
+template<typename data_type,typename function_type>
+inline void complex_plot(data_type *out, const double *point_data, const mint &width, const mint &height,const double &eps,const function_type &func)
 {
     for (mint ii = 0; ii < height; ii++)
       for (mint jj = 0; jj < width; jj++)
@@ -37,12 +39,12 @@ EXTERN_C DLLEXPORT int complexplot(WolframLibraryData libData, mint Argc, MArgum
     MTensor tensor=MArgument_getMTensor(Args[0]);
     double eps=MArgument_getReal(Args[1]);
     double *real_data=libData->MTensor_getRealData(tensor);
-    mint width=(real_data[1]-real_data[0])/eps,height=(real_data[3]-real_data[2])/eps;
+    mint width=ceil((real_data[1]-real_data[0])/eps),height=ceil((real_data[3]-real_data[2])/eps);
     auto imageFuns=libData->imageLibraryFunctions;
     MImage image_out;
-    imageFuns->MImage_new2D(width,height,3,MImage_Type_Bit,MImage_CS_RGB,True,&image_out);
-    raw_t_bit *out=imageFuns->MImage_getBitData(image_out);
-    _Complex_Plot_::complex_plot(out, array<double,2>{real_data[0],real_data[3]}.data(),width, height, eps, ___);
+    imageFuns->MImage_new2D(width,height,3,MImage_Type_Bit8,MImage_CS_RGB,True,&image_out);
+    raw_t_ubit8 *out=imageFuns->MImage_getByteData(image_out);
+    _Complex_Plot_::complex_plot(out, array<double,2>{real_data[0],real_data[3]}.data(),width, height, eps, ___<raw_t_ubit8>);
     MArgument_setMImage(Res, image_out);
     return LIBRARY_NO_ERROR;
 }
