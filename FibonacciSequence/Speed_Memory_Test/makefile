@@ -1,9 +1,9 @@
 all: S M  
 .PHONY : all
 S : Speed_Test.cpp
-	clang++ -Ofast Speed_Test.cpp -o S -std=c++17 -Wall
+	g++ -Ofast Speed_Test.cpp -o S -std=c++17 -Wall
 M : Memory_Test.cpp
-	clang++ -Ofast Memory_Test.cpp -o M -std=c++17 -Wall
+	g++ -Ofast Memory_Test.cpp -o M -std=c++17 -Wall
 SpeedTest :
 				time ./S  1000000
 
