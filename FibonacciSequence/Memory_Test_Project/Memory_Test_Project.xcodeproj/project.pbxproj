@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FCC7EDAA25A8778D006826EA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC7EDA925A8778D006826EA /* main.cpp */; };
+		FC1E548C25B9B24B0024A50D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC1E548B25B9B24B0024A50D /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FCC7EDA425A8778D006826EA /* CopyFiles */ = {
+		FC1E548625B9B24B0024A50D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FCC7EDA625A8778D006826EA /* Huffman */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Huffman; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCC7EDA925A8778D006826EA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FC1E548825B9B24B0024A50D /* Memory_Test_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Memory_Test_Project; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1E548B25B9B24B0024A50D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FC1E549325B9B27E0024A50D /* FibonacciSequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FibonacciSequence.hpp; path = "../../Speed&Memory_Test/FibonacciSequence.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FCC7EDA325A8778D006826EA /* Frameworks */ = {
+		FC1E548525B9B24B0024A50D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,64 +39,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FCC7ED9D25A8778D006826EA = {
+		FC1E547F25B9B24B0024A50D = {
 			isa = PBXGroup;
 			children = (
-				FCC7EDA825A8778D006826EA /* Huffman */,
-				FCC7EDA725A8778D006826EA /* Products */,
+				FC1E548A25B9B24B0024A50D /* Memory_Test_Project */,
+				FC1E548925B9B24B0024A50D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FCC7EDA725A8778D006826EA /* Products */ = {
+		FC1E548925B9B24B0024A50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCC7EDA625A8778D006826EA /* Huffman */,
+				FC1E548825B9B24B0024A50D /* Memory_Test_Project */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FCC7EDA825A8778D006826EA /* Huffman */ = {
+		FC1E548A25B9B24B0024A50D /* Memory_Test_Project */ = {
 			isa = PBXGroup;
 			children = (
-				FCC7EDA925A8778D006826EA /* main.cpp */,
+				FC1E549325B9B27E0024A50D /* FibonacciSequence.hpp */,
+				FC1E548B25B9B24B0024A50D /* main.cpp */,
 			);
-			path = Huffman;
+			path = Memory_Test_Project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FCC7EDA525A8778D006826EA /* Huffman */ = {
+		FC1E548725B9B24B0024A50D /* Memory_Test_Project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCC7EDAD25A8778D006826EA /* Build configuration list for PBXNativeTarget "Huffman" */;
+			buildConfigurationList = FC1E548F25B9B24B0024A50D /* Build configuration list for PBXNativeTarget "Memory_Test_Project" */;
 			buildPhases = (
-				FCC7EDA225A8778D006826EA /* Sources */,
-				FCC7EDA325A8778D006826EA /* Frameworks */,
-				FCC7EDA425A8778D006826EA /* CopyFiles */,
+				FC1E548425B9B24B0024A50D /* Sources */,
+				FC1E548525B9B24B0024A50D /* Frameworks */,
+				FC1E548625B9B24B0024A50D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Huffman;
-			productName = Huffman;
-			productReference = FCC7EDA625A8778D006826EA /* Huffman */;
+			name = Memory_Test_Project;
+			productName = Memory_Test_Project;
+			productReference = FC1E548825B9B24B0024A50D /* Memory_Test_Project */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FCC7ED9E25A8778D006826EA /* Project object */ = {
+		FC1E548025B9B24B0024A50D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					FCC7EDA525A8778D006826EA = {
+					FC1E548725B9B24B0024A50D = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = FCC7EDA125A8778D006826EA /* Build configuration list for PBXProject "Huffman" */;
+			buildConfigurationList = FC1E548325B9B24B0024A50D /* Build configuration list for PBXProject "Memory_Test_Project" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -103,29 +105,29 @@
 				en,
 				Base,
 			);
-			mainGroup = FCC7ED9D25A8778D006826EA;
-			productRefGroup = FCC7EDA725A8778D006826EA /* Products */;
+			mainGroup = FC1E547F25B9B24B0024A50D;
+			productRefGroup = FC1E548925B9B24B0024A50D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FCC7EDA525A8778D006826EA /* Huffman */,
+				FC1E548725B9B24B0024A50D /* Memory_Test_Project */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FCC7EDA225A8778D006826EA /* Sources */ = {
+		FC1E548425B9B24B0024A50D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC7EDAA25A8778D006826EA /* main.cpp in Sources */,
+				FC1E548C25B9B24B0024A50D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FCC7EDAB25A8778D006826EA /* Debug */ = {
+		FC1E548D25B9B24B0024A50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +186,7 @@
 			};
 			name = Debug;
 		};
-		FCC7EDAC25A8778D006826EA /* Release */ = {
+		FC1E548E25B9B24B0024A50D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +238,7 @@
 			};
 			name = Release;
 		};
-		FCC7EDAE25A8778D006826EA /* Debug */ = {
+		FC1E549025B9B24B0024A50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -246,7 +248,7 @@
 			};
 			name = Debug;
 		};
-		FCC7EDAF25A8778D006826EA /* Release */ = {
+		FC1E549125B9B24B0024A50D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -259,25 +261,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FCC7EDA125A8778D006826EA /* Build configuration list for PBXProject "Huffman" */ = {
+		FC1E548325B9B24B0024A50D /* Build configuration list for PBXProject "Memory_Test_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCC7EDAB25A8778D006826EA /* Debug */,
-				FCC7EDAC25A8778D006826EA /* Release */,
+				FC1E548D25B9B24B0024A50D /* Debug */,
+				FC1E548E25B9B24B0024A50D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCC7EDAD25A8778D006826EA /* Build configuration list for PBXNativeTarget "Huffman" */ = {
+		FC1E548F25B9B24B0024A50D /* Build configuration list for PBXNativeTarget "Memory_Test_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCC7EDAE25A8778D006826EA /* Debug */,
-				FCC7EDAF25A8778D006826EA /* Release */,
+				FC1E549025B9B24B0024A50D /* Debug */,
+				FC1E549125B9B24B0024A50D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FCC7ED9E25A8778D006826EA /* Project object */;
+	rootObject = FC1E548025B9B24B0024A50D /* Project object */;
 }
