@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1597A825BA5D6D00FA410A /* FibonacciSequence.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC1597A625BA5AEB00FA410A /* FibonacciSequence.hpp */; };
 		FC1E548C25B9B24B0024A50D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC1E548B25B9B24B0024A50D /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,9 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC1597A625BA5AEB00FA410A /* FibonacciSequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FibonacciSequence.hpp; path = ../../Speed_Memory_Test/FibonacciSequence.hpp; sourceTree = "<group>"; };
 		FC1E548825B9B24B0024A50D /* Memory_Test_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Memory_Test_Project; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1E548B25B9B24B0024A50D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		FC1E549325B9B27E0024A50D /* FibonacciSequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FibonacciSequence.hpp; path = "../../Speed&Memory_Test/FibonacciSequence.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +59,7 @@
 		FC1E548A25B9B24B0024A50D /* Memory_Test_Project */ = {
 			isa = PBXGroup;
 			children = (
-				FC1E549325B9B27E0024A50D /* FibonacciSequence.hpp */,
+				FC1597A625BA5AEB00FA410A /* FibonacciSequence.hpp */,
 				FC1E548B25B9B24B0024A50D /* main.cpp */,
 			);
 			path = Memory_Test_Project;
@@ -120,6 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1597A825BA5D6D00FA410A /* FibonacciSequence.hpp in Sources */,
 				FC1E548C25B9B24B0024A50D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
