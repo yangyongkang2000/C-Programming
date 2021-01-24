@@ -21,13 +21,13 @@ int main(int argc, const char * argv[]) {
     using namespace std;
     using namespace FibonacciSequence;
     int n;
-    if(argc!=2||(n=atoi(argv[1]))<1||n>100000000)
+    if(argc!=2||(n=atoi(argv[1]))<1||n>0x989680)
         return 1;
     if(n<0x186A0)
     {
-        cout<<fibonacci<100000001, 2,vector>(n);
+        cout<<fibonacci<10000001, 2,vector>(n);
     }else if(n<0x4C4B40)
-        cout<<fibonacci<100000001, 1,vector>(n);
-    else cout<<fibonacci<100000001, 0,vector>(n);
+        cout<<fibonacci<10000001, 1,vector>(n);
+    else cout<<fibonacci<10000001, 0,vector>(n);
     return 0;
 }
