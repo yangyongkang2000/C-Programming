@@ -1,10 +1,10 @@
 export[str_String :
    "/Users/yangyongkang/Library/Developer/Xcode/DerivedData/\
 BarnsleyFern-azczmyhbrzlprfcxjphjblgvxfmr/Build/Products/Release/\
-libBarnsleyFern.dylib", "BarnsleyFernPlot"] :=
+libBarnsleyFern.dylib", "BarnsleyFernPlot",str1_String:"BernsleyFernPlot"] :=
  BarnsleyFernPlot =
   LibraryFunctionLoad[
-   str, {{Real, 2}, {Real, 1}, {Real, 1}, {Real, 2}, {Integer,
+   str,str1, {{Real, 2}, {Real, 1}, {Real, 1}, {Real, 2}, {Integer,
      1}, {Integer, 1}, Integer, Integer},
    LibraryDataType[Image, "Byte"]];
 (*example*)
