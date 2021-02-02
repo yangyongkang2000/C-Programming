@@ -85,7 +85,7 @@ inline bool buffer_file_zip(const char *file_in_path,const char* file_out_path)
      result[index++]=bit_count%BIT<T>;
     if(b)
     {
-        for(auto i=0;i<table.size();i++)
+        for(UL i=0;i<table.size();i++)
         {
             std::get<T1>(table1[i])=(std::get<BT<T>>(table[i])).to_ullong();
             std::get<T>(table1[i])=std::get<T>(table[i]);
@@ -118,9 +118,9 @@ inline bool buffer_file_unzip(const char *file_in_path,const char* file_out_path
     }
     UL   index=0;
     auto ch=tree;
-    auto ll=static_cast<int>(v.size())-1;
+    UL ll=v.size()-1;
     FILE *file_out=fopen(file_out_path, "wb");
-    for(auto i=r2*size+3;i<ll;i++)
+    for(UL i=r2*size+3;i<ll;i++)
     {
         std::bitset<BIT<T>> b(v[i]);
         for(auto i=BIT<T>-1;i>=0;i--)

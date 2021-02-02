@@ -129,8 +129,8 @@ inline C<T> tree_unzip(const C<T> &v)
         create_tree_unzip(tree, v[3+r2*i], ch,v[2+r2+r2*i]-1);
     }
     auto ch=tree;
-    auto ll=static_cast<int>(v.size())-1;
-    for(auto i=r2*size+3;i<ll;i++)
+    UL ll=v.size()-1;
+    for(UL i=r2*size+3;i<ll;i++)
     {
         std::bitset<BIT<T>> b(v[i]);
         for(auto i=BIT<T>-1;i>=0;i--)
@@ -161,6 +161,7 @@ inline C<T> file_to_vector(const char *file_in_path)
     namespace fs = std::filesystem;
     fs::path p1(file_in_path);
     auto fileSize_in=fs::file_size(p1);
+    assert(fileSize_in>0);
     C<T> result;
     result.reserve(fileSize_in+1);
     FILE *file_in=fopen(file_in_path, "rb");
