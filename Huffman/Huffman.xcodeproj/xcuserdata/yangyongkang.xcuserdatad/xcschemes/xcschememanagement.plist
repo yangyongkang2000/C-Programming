@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CircleLight2D.xcscheme_^#shared#^_</key>
+		<key>Huffman.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FC610C5C25BE7E36003E665C</key>
+		<key>FC9BA64E25C0518800285624</key>
 		<dict>
 			<key>primary</key>
 			<true/>

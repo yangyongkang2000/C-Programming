@@ -21,7 +21,7 @@ EXTERN_C DLLEXPORT int CircleLight(WolframLibraryData libData, mint Argc, MArgum
     _b=MArgument_getBoolean(Args[1]);
     auto range=libData->MTensor_getRealData(MArgument_getMTensor(Args[2]));
     auto wh=libData->MTensor_getIntegerData(MArgument_getMTensor(Args[3]));
-    ImageInfo<double,mint> im(range[0],range[1],range[2],range[3],wh[0],wh[1],3);
+    ImageInfo<double,mint> im(range[0],range[1],range[2],range[3],wh[0],wh[1]);
     auto condition=libData->MTensor_getRealData(MArgument_getMTensor(Args[4]));
     MAX_DISTANCE=condition[0];
     EPSILON=condition[1];
@@ -37,7 +37,7 @@ EXTERN_C DLLEXPORT int CircleLight(WolframLibraryData libData, mint Argc, MArgum
     MImage image_out;
     imageFuns->MImage_new2D(wh[0],wh[1],3,MImage_Type_Bit8,MImage_CS_RGB,True,&image_out);
     raw_t_ubit8 *out=imageFuns->MImage_getByteData(image_out);
-    Circle_Light2D(out,im,v);
+    Circle_Light2D<3>(out,im,v);
     MArgument_setMImage(Res, image_out);
     return LIBRARY_NO_ERROR;
 }

@@ -7,22 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC610C6125BE7E36003E665C /* CircleLight2D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC610C6025BE7E36003E665C /* CircleLight2D.hpp */; };
-		FC610C6525BE7E36003E665C /* CircleLight2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC610C6425BE7E36003E665C /* CircleLight2D.cpp */; };
-		FC610C6D25BE7EB7003E665C /* Light2D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC610C6C25BE7EB7003E665C /* Light2D.hpp */; };
-		FC9BA63C25BFE46D00285624 /* Light2D.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC610C6C25BE7EB7003E665C /* Light2D.hpp */; };
-		FC9BA63E25BFE47200285624 /* CircleLight2D.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC610C6025BE7E36003E665C /* CircleLight2D.hpp */; };
+		FC82244125C839E3008B9379 /* Huffman.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9BA65A25C0519F00285624 /* Huffman.hpp */; };
+		FC82244325C839E8008B9379 /* zip_unzip.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC0A5AA225C5287500C54C5F /* zip_unzip.hpp */; };
+		FC82244525C839EC008B9379 /* buffer_file_zip_unzip.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC0A5AA425C52A5F00C54C5F /* buffer_file_zip_unzip.hpp */; };
+		FCD64F3E25C8DFE200145444 /* test_huffman_zip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCD64F3B25C8DF5600145444 /* test_huffman_zip.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC9BA64D25C0518800285624 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		FC610C5D25BE7E36003E665C /* libCircleLight2D.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCircleLight2D.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC610C6025BE7E36003E665C /* CircleLight2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleLight2D.hpp; sourceTree = "<group>"; };
-		FC610C6425BE7E36003E665C /* CircleLight2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircleLight2D.cpp; sourceTree = "<group>"; };
-		FC610C6C25BE7EB7003E665C /* Light2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Light2D.hpp; path = include/Light2D.hpp; sourceTree = SOURCE_ROOT; };
+		FC0A5AA225C5287500C54C5F /* zip_unzip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = zip_unzip.hpp; sourceTree = "<group>"; };
+		FC0A5AA425C52A5F00C54C5F /* buffer_file_zip_unzip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer_file_zip_unzip.hpp; sourceTree = "<group>"; };
+		FC3BA7D825C84D500051BF7F /* unyykhf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unyykhf.cpp; sourceTree = "<group>"; };
+		FC9BA64F25C0518800285624 /* Huffman */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Huffman; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9BA65225C0518800285624 /* yykhf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = yykhf.cpp; sourceTree = "<group>"; };
+		FC9BA65A25C0519F00285624 /* Huffman.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Huffman.hpp; sourceTree = "<group>"; };
+		FCD64F3B25C8DF5600145444 /* test_huffman_zip.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_huffman_zip.cpp; sourceTree = "<group>"; };
+		FCD64F4025C8E70400145444 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCD64F4125C8E87800145444 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FC610C5B25BE7E36003E665C /* Frameworks */ = {
+		FC9BA64C25C0518800285624 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,78 +48,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC610C5425BE7E36003E665C = {
+		FC9BA64625C0518800285624 = {
 			isa = PBXGroup;
 			children = (
-				FC610C5F25BE7E36003E665C /* CircleLight2D */,
-				FC610C5E25BE7E36003E665C /* Products */,
+				FC9BA65125C0518800285624 /* Huffman */,
+				FC9BA65025C0518800285624 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FC610C5E25BE7E36003E665C /* Products */ = {
+		FC9BA65025C0518800285624 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC610C5D25BE7E36003E665C /* libCircleLight2D.dylib */,
+				FC9BA64F25C0518800285624 /* Huffman */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC610C5F25BE7E36003E665C /* CircleLight2D */ = {
+		FC9BA65125C0518800285624 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				FC610C6C25BE7EB7003E665C /* Light2D.hpp */,
-				FC610C6025BE7E36003E665C /* CircleLight2D.hpp */,
-				FC610C6425BE7E36003E665C /* CircleLight2D.cpp */,
+				FCD64F4125C8E87800145444 /* makefile */,
+				FC9BA65225C0518800285624 /* yykhf.cpp */,
+				FC9BA65A25C0519F00285624 /* Huffman.hpp */,
+				FC0A5AA225C5287500C54C5F /* zip_unzip.hpp */,
+				FC0A5AA425C52A5F00C54C5F /* buffer_file_zip_unzip.hpp */,
+				FC3BA7D825C84D500051BF7F /* unyykhf.cpp */,
+				FCD64F3B25C8DF5600145444 /* test_huffman_zip.cpp */,
+				FCD64F4025C8E70400145444 /* README.md */,
 			);
-			path = CircleLight2D;
+			path = Huffman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		FC610C5925BE7E36003E665C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC610C6125BE7E36003E665C /* CircleLight2D.hpp in Headers */,
-				FC610C6D25BE7EB7003E665C /* Light2D.hpp in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		FC610C5C25BE7E36003E665C /* CircleLight2D */ = {
+		FC9BA64E25C0518800285624 /* Huffman */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC610C6825BE7E36003E665C /* Build configuration list for PBXNativeTarget "CircleLight2D" */;
+			buildConfigurationList = FC9BA65625C0518800285624 /* Build configuration list for PBXNativeTarget "Huffman" */;
 			buildPhases = (
-				FC610C5925BE7E36003E665C /* Headers */,
-				FC610C5A25BE7E36003E665C /* Sources */,
-				FC610C5B25BE7E36003E665C /* Frameworks */,
+				FC9BA64B25C0518800285624 /* Sources */,
+				FC9BA64C25C0518800285624 /* Frameworks */,
+				FC9BA64D25C0518800285624 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CircleLight2D;
-			productName = CircleLight2D;
-			productReference = FC610C5D25BE7E36003E665C /* libCircleLight2D.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
+			name = Huffman;
+			productName = Huffman;
+			productReference = FC9BA64F25C0518800285624 /* Huffman */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FC610C5525BE7E36003E665C /* Project object */ = {
+		FC9BA64725C0518800285624 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					FC610C5C25BE7E36003E665C = {
+					FC9BA64E25C0518800285624 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = FC610C5825BE7E36003E665C /* Build configuration list for PBXProject "CircleLight2D" */;
+			buildConfigurationList = FC9BA64A25C0518800285624 /* Build configuration list for PBXProject "Huffman" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,31 +120,32 @@
 				en,
 				Base,
 			);
-			mainGroup = FC610C5425BE7E36003E665C;
-			productRefGroup = FC610C5E25BE7E36003E665C /* Products */;
+			mainGroup = FC9BA64625C0518800285624;
+			productRefGroup = FC9BA65025C0518800285624 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC610C5C25BE7E36003E665C /* CircleLight2D */,
+				FC9BA64E25C0518800285624 /* Huffman */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FC610C5A25BE7E36003E665C /* Sources */ = {
+		FC9BA64B25C0518800285624 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC9BA63E25BFE47200285624 /* CircleLight2D.hpp in Sources */,
-				FC9BA63C25BFE46D00285624 /* Light2D.hpp in Sources */,
-				FC610C6525BE7E36003E665C /* CircleLight2D.cpp in Sources */,
+				FCD64F3E25C8DFE200145444 /* test_huffman_zip.cpp in Sources */,
+				FC82244525C839EC008B9379 /* buffer_file_zip_unzip.hpp in Sources */,
+				FC82244325C839E8008B9379 /* zip_unzip.hpp in Sources */,
+				FC82244125C839E3008B9379 /* Huffman.hpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FC610C6625BE7E36003E665C /* Debug */ = {
+		FC9BA65425C0518800285624 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -194,7 +204,7 @@
 			};
 			name = Debug;
 		};
-		FC610C6725BE7E36003E665C /* Release */ = {
+		FC9BA65525C0518800285624 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,63 +256,54 @@
 			};
 			name = Release;
 		};
-		FC610C6925BE7E36003E665C /* Debug */ = {
+		FC9BA65725C0518800285624 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include/;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		FC610C6A25BE7E36003E665C /* Release */ = {
+		FC9BA65825C0518800285624 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC610C5825BE7E36003E665C /* Build configuration list for PBXProject "CircleLight2D" */ = {
+		FC9BA64A25C0518800285624 /* Build configuration list for PBXProject "Huffman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC610C6625BE7E36003E665C /* Debug */,
-				FC610C6725BE7E36003E665C /* Release */,
+				FC9BA65425C0518800285624 /* Debug */,
+				FC9BA65525C0518800285624 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC610C6825BE7E36003E665C /* Build configuration list for PBXNativeTarget "CircleLight2D" */ = {
+		FC9BA65625C0518800285624 /* Build configuration list for PBXNativeTarget "Huffman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC610C6925BE7E36003E665C /* Debug */,
-				FC610C6A25BE7E36003E665C /* Release */,
+				FC9BA65725C0518800285624 /* Debug */,
+				FC9BA65825C0518800285624 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FC610C5525BE7E36003E665C /* Project object */;
+	rootObject = FC9BA64725C0518800285624 /* Project object */;
 }

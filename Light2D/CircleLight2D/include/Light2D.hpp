@@ -10,13 +10,12 @@
 template<typename T,typename T1=int>
 struct ImageInfo
 {
-    ImageInfo()=default;
-    ImageInfo(T x_0,T x_1,T y_0,T y_1,T1 w,T1 h,T1 c):
-    x0(x_0),x1(x_1),y0(y_0),y1(y_1),width(w),height(h),channels(c){
+    ImageInfo(T x_0,T x_1,T y_0,T y_1,T1 w,T1 h):
+    x0(x_0),x1(x_1),y0(y_0),y1(y_1),width(w),height(h){
         x_delta=(x_1-x_0)/(w-1);
         y_delta=(y_0-y_1)/(h-1);
     }
-    T1 width,height,channels;
+    T1 width,height;
     T x0,x1,y0,y1,x_delta,y_delta;
 };
 template<typename T>
