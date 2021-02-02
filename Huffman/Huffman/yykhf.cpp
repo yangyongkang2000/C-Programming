@@ -16,7 +16,6 @@
 #include<bitset>
 #include<cassert>
 #include<cstring>
-#include<execution>
 #include<numeric>
 #include<type_traits>
 #include"buffer_file_zip_unzip.hpp"
