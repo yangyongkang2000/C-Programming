@@ -64,7 +64,7 @@ inline C<T> zip(const C<T> &v)
     bool b=std::get<T>(*std::max_element(table.begin(), table.end(), [](auto &_,auto &__){
         return std::get<T>(_)<std::get<T>(__);}))<=(L<T, 2>+1);
     C<T> result;
-    T1 bit_count=std::transform_reduce(list.begin(), list.end(), table.begin(), 0, std::plus<>(), [](auto &_,auto &__)->T1{return _*static_cast<T1>(std::get<T>(__));});
+    T1 bit_count=std::inner_product(list.begin(), list.end(), table.begin(), 0, std::plus<>(), [](auto &_,auto &__)->T1{return _*static_cast<T1>(std::get<T>(__));});
     T1 size=b?(BIT<T>+2)*_count+3+(bit_count>>3):((BIT<T> << 2)+2)*_count+3+(bit_count>>3);
     result.reserve(size+10);
     if(_count==MAX<T>+1) _count=0;
