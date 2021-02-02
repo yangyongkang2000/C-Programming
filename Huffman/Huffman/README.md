@@ -74,7 +74,7 @@ bool b=std::get<T>(*std::max_element(table.begin(), table.end(), [](auto &_,auto
  std::copy(v.begin()+l*N, v.end(), buffer.data());
 
 ```
-> 当然我用了数据结构几乎都是C+=标准库提供的，而且我的不正确声明，导致有些数据结构声明很复杂。
+> 当然我用了数据结构几乎都是C++标准库提供的，而且我的不正确声明，导致有些数据结构声明很复杂。
 ```C++
  std::array<T1,MAX<T>+1> list{};
     std::array<std::tuple<BT<T>,T>,MAX<T>+1> table{};
