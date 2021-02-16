@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC82244125C839E3008B9379 /* Huffman.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9BA65A25C0519F00285624 /* Huffman.hpp */; };
-		FC82244325C839E8008B9379 /* zip_unzip.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC0A5AA225C5287500C54C5F /* zip_unzip.hpp */; };
-		FC82244525C839EC008B9379 /* buffer_file_zip_unzip.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC0A5AA425C52A5F00C54C5F /* buffer_file_zip_unzip.hpp */; };
-		FCCF84DE25D3B082000CE4FD /* yykhf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9BA65225C0518800285624 /* yykhf.cpp */; };
+		FCB9037E25D8C17F00E1E5E3 /* euler_tour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB9037D25D8C17F00E1E5E3 /* euler_tour.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FC9BA64D25C0518800285624 /* CopyFiles */ = {
+		FCB9036E25D8C13700E1E5E3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -26,19 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FC0A5AA225C5287500C54C5F /* zip_unzip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = zip_unzip.hpp; sourceTree = "<group>"; };
-		FC0A5AA425C52A5F00C54C5F /* buffer_file_zip_unzip.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer_file_zip_unzip.hpp; sourceTree = "<group>"; };
-		FC3BA7D825C84D500051BF7F /* unyykhf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unyykhf.cpp; sourceTree = "<group>"; };
-		FC9BA64F25C0518800285624 /* Huffman */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Huffman; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC9BA65225C0518800285624 /* yykhf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = yykhf.cpp; sourceTree = "<group>"; };
-		FC9BA65A25C0519F00285624 /* Huffman.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Huffman.hpp; sourceTree = "<group>"; };
-		FCD64F3B25C8DF5600145444 /* test_huffman_zip.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_huffman_zip.cpp; sourceTree = "<group>"; };
-		FCD64F4025C8E70400145444 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FCD64F4125C8E87800145444 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		FCB9037025D8C13700E1E5E3 /* EulerTour */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EulerTour; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB9037C25D8C16C00E1E5E3 /* euler_tour.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = euler_tour.hpp; sourceTree = "<group>"; };
+		FCB9037D25D8C17F00E1E5E3 /* euler_tour.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = euler_tour.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FC9BA64C25C0518800285624 /* Frameworks */ = {
+		FCB9036D25D8C13700E1E5E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,71 +39,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC9BA64625C0518800285624 = {
+		FCB9036725D8C13700E1E5E3 = {
 			isa = PBXGroup;
 			children = (
-				FC9BA65125C0518800285624 /* Huffman */,
-				FC9BA65025C0518800285624 /* Products */,
+				FCB9037225D8C13700E1E5E3 /* EulerTour */,
+				FCB9037125D8C13700E1E5E3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FC9BA65025C0518800285624 /* Products */ = {
+		FCB9037125D8C13700E1E5E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC9BA64F25C0518800285624 /* Huffman */,
+				FCB9037025D8C13700E1E5E3 /* EulerTour */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC9BA65125C0518800285624 /* Huffman */ = {
+		FCB9037225D8C13700E1E5E3 /* EulerTour */ = {
 			isa = PBXGroup;
 			children = (
-				FCD64F4125C8E87800145444 /* makefile */,
-				FC9BA65225C0518800285624 /* yykhf.cpp */,
-				FC9BA65A25C0519F00285624 /* Huffman.hpp */,
-				FC0A5AA225C5287500C54C5F /* zip_unzip.hpp */,
-				FC0A5AA425C52A5F00C54C5F /* buffer_file_zip_unzip.hpp */,
-				FC3BA7D825C84D500051BF7F /* unyykhf.cpp */,
-				FCD64F3B25C8DF5600145444 /* test_huffman_zip.cpp */,
-				FCD64F4025C8E70400145444 /* README.md */,
+				FCB9037C25D8C16C00E1E5E3 /* euler_tour.hpp */,
+				FCB9037D25D8C17F00E1E5E3 /* euler_tour.cpp */,
 			);
-			path = Huffman;
+			path = EulerTour;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC9BA64E25C0518800285624 /* Huffman */ = {
+		FCB9036F25D8C13700E1E5E3 /* EulerTour */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC9BA65625C0518800285624 /* Build configuration list for PBXNativeTarget "Huffman" */;
+			buildConfigurationList = FCB9037725D8C13700E1E5E3 /* Build configuration list for PBXNativeTarget "EulerTour" */;
 			buildPhases = (
-				FC9BA64B25C0518800285624 /* Sources */,
-				FC9BA64C25C0518800285624 /* Frameworks */,
-				FC9BA64D25C0518800285624 /* CopyFiles */,
+				FCB9036C25D8C13700E1E5E3 /* Sources */,
+				FCB9036D25D8C13700E1E5E3 /* Frameworks */,
+				FCB9036E25D8C13700E1E5E3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Huffman;
-			productName = Huffman;
-			productReference = FC9BA64F25C0518800285624 /* Huffman */;
+			name = EulerTour;
+			productName = EulerTour;
+			productReference = FCB9037025D8C13700E1E5E3 /* EulerTour */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FC9BA64725C0518800285624 /* Project object */ = {
+		FCB9036825D8C13700E1E5E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					FC9BA64E25C0518800285624 = {
-						CreatedOnToolsVersion = 12.3;
+					FCB9036F25D8C13700E1E5E3 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = FC9BA64A25C0518800285624 /* Build configuration list for PBXProject "Huffman" */;
+			buildConfigurationList = FCB9036B25D8C13700E1E5E3 /* Build configuration list for PBXProject "EulerTour" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -120,38 +105,35 @@
 				en,
 				Base,
 			);
-			mainGroup = FC9BA64625C0518800285624;
-			productRefGroup = FC9BA65025C0518800285624 /* Products */;
+			mainGroup = FCB9036725D8C13700E1E5E3;
+			productRefGroup = FCB9037125D8C13700E1E5E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC9BA64E25C0518800285624 /* Huffman */,
+				FCB9036F25D8C13700E1E5E3 /* EulerTour */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FC9BA64B25C0518800285624 /* Sources */ = {
+		FCB9036C25D8C13700E1E5E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCCF84DE25D3B082000CE4FD /* yykhf.cpp in Sources */,
-				FC82244525C839EC008B9379 /* buffer_file_zip_unzip.hpp in Sources */,
-				FC82244325C839E8008B9379 /* zip_unzip.hpp in Sources */,
-				FC82244125C839E3008B9379 /* Huffman.hpp in Sources */,
+				FCB9037E25D8C17F00E1E5E3 /* euler_tour.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FC9BA65425C0518800285624 /* Debug */ = {
+		FCB9037525D8C13700E1E5E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -204,13 +186,13 @@
 			};
 			name = Debug;
 		};
-		FC9BA65525C0518800285624 /* Release */ = {
+		FCB9037625D8C13700E1E5E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -256,28 +238,22 @@
 			};
 			name = Release;
 		};
-		FC9BA65725C0518800285624 /* Debug */ = {
+		FCB9037825D8C13700E1E5E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_OPTIMIZATION_LEVEL = 3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		FC9BA65825C0518800285624 /* Release */ = {
+		FCB9037925D8C13700E1E5E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_OPTIMIZATION_LEVEL = 3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -285,25 +261,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC9BA64A25C0518800285624 /* Build configuration list for PBXProject "Huffman" */ = {
+		FCB9036B25D8C13700E1E5E3 /* Build configuration list for PBXProject "EulerTour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC9BA65425C0518800285624 /* Debug */,
-				FC9BA65525C0518800285624 /* Release */,
+				FCB9037525D8C13700E1E5E3 /* Debug */,
+				FCB9037625D8C13700E1E5E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC9BA65625C0518800285624 /* Build configuration list for PBXNativeTarget "Huffman" */ = {
+		FCB9037725D8C13700E1E5E3 /* Build configuration list for PBXNativeTarget "EulerTour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC9BA65725C0518800285624 /* Debug */,
-				FC9BA65825C0518800285624 /* Release */,
+				FCB9037825D8C13700E1E5E3 /* Debug */,
+				FCB9037925D8C13700E1E5E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FC9BA64725C0518800285624 /* Project object */;
+	rootObject = FCB9036825D8C13700E1E5E3 /* Project object */;
 }
