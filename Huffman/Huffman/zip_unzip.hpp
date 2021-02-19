@@ -129,8 +129,8 @@ inline C<T> tree_unzip(const C<T> &v)
         create_tree_unzip(tree, v[3+r2*i], ch,v[2+r2+r2*i]-1);
     }
     auto ch=tree;
-    UL ll=v.size()-1;
-    for(UL i=r2*size+3;i<ll;i++)
+    std::size_t ll=v.size()-1;
+    for(std::size_t i=r2*size+3;i<ll;i++)
     {
         std::bitset<BIT<T>> b(v[i]);
         for(auto i=BIT<T>-1;i>=0;i--)

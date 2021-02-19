@@ -118,9 +118,9 @@ inline bool buffer_file_unzip(const char *file_in_path,const char* file_out_path
     }
     UL   index=0;
     auto ch=tree;
-    UL ll=v.size()-1;
+    std::size_t ll=v.size()-1;
     FILE *file_out=fopen(file_out_path, "wb");
-    for(UL i=r2*size+3;i<ll;i++)
+    for(std::size_t i=r2*size+3;i<ll;i++)
     {
         std::bitset<BIT<T>> b(v[i]);
         for(auto i=BIT<T>-1;i>=0;i--)
