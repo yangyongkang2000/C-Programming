@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.17)
+project(GCC_AtomicOrbital)
+add_compile_options(-O3)
+set(CMAKE_CXX_STANDARD 17)
+set(cmake_build_type RELEASE)
+add_library(GCC_AtomicOrbital SHARED atomic_orbital.cpp atomic_orbital.h)
+include_directories(/usr/local/include/)

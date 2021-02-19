@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/local/bin/gcc-10 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-10 -G "CodeBlocks - Unix Makefiles" /Users/yangyongkang/Documents/C-Programming/ComplexPlot/GCC_AtomicOrbital
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/yangyongkang/Documents/C-Programming/ComplexPlot/GCC_AtomicOrbital/cmake-build-release

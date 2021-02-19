@@ -1,0 +1,1 @@
+/usr/local/bin/g++-10 -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -dynamiclib -Wl,-headerpad_max_install_names  -o libGCC_AtomicOrbital.dylib -install_name @rpath/libGCC_AtomicOrbital.dylib CMakeFiles/GCC_AtomicOrbital.dir/atomic_orbital.cpp.o 
