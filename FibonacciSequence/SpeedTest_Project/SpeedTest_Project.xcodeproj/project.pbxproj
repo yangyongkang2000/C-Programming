@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC1597AB25BA5F0B00FA410A /* FibonacciSequence.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FC1597AA25BA5EEA00FA410A /* FibonacciSequence.hpp */; };
 		FC1E547525B9B0B40024A50D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC1E547425B9B0B40024A50D /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -24,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FC1597AA25BA5EEA00FA410A /* FibonacciSequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FibonacciSequence.hpp; path = ../../Speed_Memory_Test/FibonacciSequence.hpp; sourceTree = "<group>"; };
 		FC1E547125B9B0B40024A50D /* SpeedTest_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpeedTest_Project; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1E547425B9B0B40024A50D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FCB903D925E144E300E1E5E3 /* FibonacciSequence_Parallel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciSequence_Parallel.h; path = ../../../../../Desktop/LeetCode/FibonacciSequence_Parallel/FibonacciSequence_Parallel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +58,7 @@
 		FC1E547325B9B0B40024A50D /* SpeedTest_Project */ = {
 			isa = PBXGroup;
 			children = (
-				FC1597AA25BA5EEA00FA410A /* FibonacciSequence.hpp */,
+				FCB903D925E144E300E1E5E3 /* FibonacciSequence_Parallel.h */,
 				FC1E547425B9B0B40024A50D /* main.cpp */,
 			);
 			path = SpeedTest_Project;
@@ -121,7 +120,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1597AB25BA5F0B00FA410A /* FibonacciSequence.hpp in Sources */,
 				FC1E547525B9B0B40024A50D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +241,7 @@
 		FC1E547925B9B0B40024A50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -253,10 +252,11 @@
 		FC1E547A25B9B0B40024A50D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
