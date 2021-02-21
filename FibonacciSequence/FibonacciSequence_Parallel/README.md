@@ -1,10 +1,16 @@
-//
-//  main.cpp
-//  SpeedTest_Project
-//
-//  Created by 杨永康 on 2021/1/21.
-//
+# 并行斐波那契数列计算
+## 前言 
+> 为充分发挥CPU多核的性能,写了并发版本。
+##  介绍
++ 如何写测试程序
+> 源文件开头用宏指定运行核数，比如
+```C++
 #define Kernel 4
+```
+> 可以指定核数为2,4,6,8。当指定其他数值,则用默认方式运行。
+
+> 完整测试程序(样例)
+```C++
 #include<iostream>
 #include <vector>
 #include<algorithm>
@@ -29,3 +35,5 @@ int main(int argc, const char * argv[]) {
     std::cout<<duration_cast<milliseconds>(t1-t0).count()<<"ms\n";
     return 0;
 }
+
+```

@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		FC1E547125B9B0B40024A50D /* SpeedTest_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpeedTest_Project; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1E547425B9B0B40024A50D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		FCB903D925E144E300E1E5E3 /* FibonacciSequence_Parallel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciSequence_Parallel.h; path = ../../../../../Desktop/LeetCode/FibonacciSequence_Parallel/FibonacciSequence_Parallel.h; sourceTree = "<group>"; };
+		FCB903DB25E1E32700E1E5E3 /* FibonacciSequence_Parallel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FibonacciSequence_Parallel.hpp; path = ../../FibonacciSequence_Parallel/FibonacciSequence_Parallel.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		FC1E547325B9B0B40024A50D /* SpeedTest_Project */ = {
 			isa = PBXGroup;
 			children = (
-				FCB903D925E144E300E1E5E3 /* FibonacciSequence_Parallel.h */,
+				FCB903DB25E1E32700E1E5E3 /* FibonacciSequence_Parallel.hpp */,
 				FC1E547425B9B0B40024A50D /* main.cpp */,
 			);
 			path = SpeedTest_Project;

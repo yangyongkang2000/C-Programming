@@ -100,6 +100,7 @@ namespace FibonacciSequence {
         result.resize(v1.size()+v2.size());
         const auto n=v1.size()>=ULL_Max[N]?ULL_Max[N]:v1.size();
         const auto m=std::min(n+v2.size()+S[N],result.size());
+#ifdef  Kernel
         auto parallel=[&](int l,int r){
             for(auto s=l;s<r;s++)
             {
@@ -111,6 +112,7 @@ namespace FibonacciSequence {
         };
         const int size=static_cast<int>(n+v2.size())/2-1;
         const int end=static_cast<int>(n+v2.size())-1;
+#endif
 #ifndef Kernel
                expr
 #elif Kernel==2
@@ -142,7 +144,12 @@ namespace FibonacciSequence {
             Kernel_8
         }
 #else
-        expr
+        if(n<1000)
+        {
+            expr
+        }else {
+            Kernel_4
+        }
 #endif
         for(auto i=0;i+1<m;i++)
         {
