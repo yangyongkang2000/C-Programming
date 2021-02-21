@@ -11,6 +11,7 @@
 
 > 完整测试程序(样例)
 ```C++
+#define Kernel 4
 #include<iostream>
 #include <vector>
 #include<algorithm>
