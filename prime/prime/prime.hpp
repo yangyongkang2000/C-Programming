@@ -217,7 +217,7 @@ inline constexpr bool test(const T x)
             T v = qpow<T>(a, d, x);
             if (v <= 1 || v == x - 1)
                 continue;
-            for (int i = 0; i < r; ++i)
+            for (T i = 0; i < r; ++i)
             {
                 v = v * v % x;
                 if (v == x - 1 && i != r - 1)
