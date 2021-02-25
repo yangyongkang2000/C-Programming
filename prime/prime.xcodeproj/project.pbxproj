@@ -23,9 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC0EC91C25E74F8A00836F83 /* prime_constexpr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prime_constexpr.hpp; sourceTree = "<group>"; };
 		FCB903E625E23EA500E1E5E3 /* prime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = prime; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB903E925E23EA500E1E5E3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FCB903F125E2426500E1E5E3 /* prime.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prime.hpp; sourceTree = "<group>"; };
+		FCB903F725E4E43000E1E5E3 /* prime_filter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prime_filter.hpp; sourceTree = "<group>"; };
+		FCB9040225E7408500E1E5E3 /* prime_table.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = prime_table.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +61,11 @@
 		FCB903E825E23EA500E1E5E3 /* prime */ = {
 			isa = PBXGroup;
 			children = (
+				FCB9040225E7408500E1E5E3 /* prime_table.hpp */,
 				FCB903E925E23EA500E1E5E3 /* main.cpp */,
 				FCB903F125E2426500E1E5E3 /* prime.hpp */,
+				FCB903F725E4E43000E1E5E3 /* prime_filter.hpp */,
+				FC0EC91C25E74F8A00836F83 /* prime_constexpr.hpp */,
 			);
 			path = prime;
 			sourceTree = "<group>";
@@ -256,7 +262,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5D4BZLJDG;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-ftemplate-depth=20000";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
