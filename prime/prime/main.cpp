@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     using namespace std::chrono;
     auto time_0=high_resolution_clock::now();
-    std::cout<<prime_filter::yyk_total<unsigned long long,202102180918,500000>()<<std::endl;
+    std::cout<<prime_filter::yyk_total<unsigned long long,2021218918,40000>()<<std::endl;
     auto time_1=high_resolution_clock::now();
     std::cout<<duration_cast<milliseconds>(time_1-time_0).count()<<"ms\n";
     return 0;
