@@ -90,4 +90,5 @@ Table[With[{t = RandomInteger[10^n, 10^n]}, {First@
 ```
 >测试结果
 
+![benchmark](https://github.com/yangyongkang2000/C-Programming/raw/master/integer_vector_to_file/source/benchmark.jpg)
 
