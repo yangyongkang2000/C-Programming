@@ -11,8 +11,8 @@
 #include<utility>
 #include<algorithm>
 #include<queue>
-#include<set>
-#include<thread>
+#include<type_traits>
+#include<execution>
 #include<numeric>
 namespace graph_algorithm {
 constexpr bool Grpah_Result=true;
@@ -43,6 +43,11 @@ template<typename T,typename T1>
 inline bool operator<(UndirectedEdge<T, T1> const &lhs,UndirectedEdge<T, T1> const &rhs) noexcept
 {
     return lhs.weight<rhs.weight;
+}
+template<class ForwardIt,class Compare>
+inline ForwardIt yyk_min(ForwardIt l,ForwardIt r,Compare cmp)
+{
+    return cmp(*r,*l)?r:l;
 }
 template<bool method,bool Result,bool parallel=false,bool zero=false,template<typename ...> class V,template<typename ...> class L,typename T,typename T1>
 inline std::pair<V<UndirectedEdge<T, T1>>,T1> prim(V<L<std::pair<T, T1>>> const & graph,V<table_entry<T,T1>> & table,T start) noexcept
@@ -98,25 +103,48 @@ inline std::pair<V<UndirectedEdge<T, T1>>,T1> prim(V<L<std::pair<T, T1>>> const 
                     }
         }*/
     }else {
+        using Iterator=decltype(std::begin(table));
+        auto f=[](auto &l,auto &r){
+            if(l.known)
+                return false;
+            if(r.known)
+                return true;
+            return l.d_v<r.d_v;
+        };
+        auto g=[&table](auto &v) {
+            return [&table,&v](auto &w) {
+            if(!table[w.first].known)
+        if(w.second<table[w.first].d_v)
+        {
+            table[w.first].d_v=w.second;
+            table[w.first].p_v=v;
+        }
+            };
+        };
         while(true)
         {
-            auto it=std::min_element(table.begin()+b, table.end(), [](auto &l,auto &r){
-                if(l.known)
-                    return false;
-                if(r.known)
-                    return true;
-                return l.d_v<r.d_v;
-            });
+            Iterator it;
+            if constexpr(parallel)
+            {
+                it=min_element(std::execution::par_unseq,std::begin(table)+b, std::end(table), f);
+            }else {
+             it=std::min_element(std::begin(table)+b, std::end(table), f);
+            }
             if(it->known) break;
             it->known=true;
             auto v=static_cast<T>(it-table.begin());
-            for(auto & w:graph[v])
+            /*for(auto & w:graph[v])
                 if(!table[w.first].known)
                     if(w.second<table[w.first].d_v)
                     {
                         table[w.first].d_v=w.second;
                         table[w.first].p_v=v;
                     }
+             */
+            if constexpr(parallel)
+                for_each(std::execution::par_unseq,std::begin(graph[v]), std::end(graph[v]), g(v));
+            else
+            std::for_each(std::begin(graph[v]), std::end(graph[v]), g(v));
         }
     }
     std::pair<V<UndirectedEdge<T,T1>>,T1> _result;
@@ -124,7 +152,7 @@ inline std::pair<V<UndirectedEdge<T, T1>>,T1> prim(V<L<std::pair<T, T1>>> const 
     _result.second=std::accumulate(table.begin()+b, table.end(), T1{0},sum);
     if constexpr(Result)
     {
-        auto &result=_result;
+        auto &result=_result.first;
         result.reserve(table.size());
         for(T i=0;i+1<start;i++)
         result.emplace_back(UndirectedEdge<T,T1>{{i,table[i].p_v},table[i].d_v});

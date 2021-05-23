@@ -1,19 +1,19 @@
 #ifndef yyk_random_h
 #define yyk_random_h
 namespace yyk_random {
-	static constexpr long A = 48271;
-	static constexpr long M = 2147483647;
-	static constexpr long Q = M / A;
-	static constexpr long R = M % A;
-	static unsigned long seed = 1;
+	static constexpr long yyk_A = 48271;
+	static constexpr long yyk_M = 2147483647;
+	static constexpr long yyk_Q = yyk_M / yyk_A;
+	static constexpr long yyk_R = yyk_M % yyk_A;
+	static unsigned long yyk_seed = 1;
 	inline void initialize_seed(unsigned long init_val) noexcept
 	{
-		seed = init_val;
+		yyk_seed = init_val;
 	}
 	long random() noexcept
 	{
-		long tmpseed = A * (seed % Q) - R * (seed / Q);
-		return seed = tmpseed >= 0 ? tmpseed : tmpseed + M;
+		long tmpseed = yyk_A * (yyk_seed % yyk_Q) - yyk_R * (yyk_seed / yyk_Q);
+		return yyk_seed = tmpseed >= 0 ? tmpseed : tmpseed + yyk_M;
 	}
 	template<typename T=long>
 	class uniform_int_distribution
@@ -36,7 +36,7 @@ namespace yyk_random {
 		uniform_real_distribution(T a, T b) :
 			l(a), r(b) {}
 		inline T operator()() noexcept {
-			return (r - l) * static_cast<T>(random()) / M + l;
+			return (r - l) * static_cast<T>(random()) / yyk_M + l;
 		}
 	private:
 		T l, r;

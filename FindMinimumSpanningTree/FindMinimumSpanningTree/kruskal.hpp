@@ -11,6 +11,7 @@
 #define kruskal_h
 #include"DisjSet.hpp"
 #include "prim.hpp"
+#include<forward_list>
 constexpr bool Kruskal=true;
 constexpr bool Prim=false;
 namespace graph_algorithm {
@@ -44,7 +45,7 @@ namespace graph_algorithm {
     return result;
 }
 
-template<bool Method,bool Result,template<typename ...> class L,bool heap=true,bool zero=false,template<typename...> class V,typename T,typename T1>
+template<bool Method,bool Result,template<typename ...> class L,bool heap=true,bool parallel=false,bool zero=false,template<typename...> class V,typename T,typename T1>
 inline  std::pair<V<UndirectedEdge<T, T1>>,T1> find_minimum_spanning_tree(V<UndirectedEdge<T,T1>> &graph) noexcept
 {
     if constexpr(Method)
@@ -62,12 +63,18 @@ inline  std::pair<V<UndirectedEdge<T, T1>>,T1> find_minimum_spanning_tree(V<Undi
         V<L<std::pair<T, T1>>> g(m);
         for(auto &_:graph)
         {
+            if constexpr(std::is_same<L<std::pair<T, T1>>, std::forward_list<std::pair<T, T1>>>::value)
+            {
             g[_.edge.first].emplace_front(std::pair<T, T1>{_.edge.second,_.weight});
             g[_.edge.second].emplace_front(std::pair<T, T1>{_.edge.first,_.weight});
+            }else {
+                g[_.edge.first].emplace_back(std::pair<T, T1>{_.edge.second,_.weight});
+                g[_.edge.second].emplace_back(std::pair<T, T1>{_.edge.first,_.weight});
+            }
         }
         V<table_entry<T, T1>> table(m);
         table[n].d_v=0;
-        return prim<heap,Result,zero>(g, table,n);
+        return prim<heap,Result,parallel,zero>(g, table,n);
     }
 }
 }

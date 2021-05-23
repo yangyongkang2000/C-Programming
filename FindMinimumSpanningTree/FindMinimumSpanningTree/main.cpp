@@ -33,8 +33,8 @@ int main(int argc, const char * argv[]) {
 using namespace graph_algorithm;
 using namespace std::chrono;
 yyk_random::uniform_int_distribution<int> dis(20,100);
-constexpr int N=5000000;
-constexpr int _M=2*N-2;
+constexpr int N=5000;
+constexpr int _M=N*(N-1)/2;
 std::vector<UndirectedEdge<int, int>> v;
 namespace test {
 
@@ -60,14 +60,14 @@ int main()
         edges[i] = {a, b, w};
     }*/
     int index=0;
-   /* for(int i=1;i<=N;i++)
+    for(int i=1;i<=N;i++)
       for(int j=i+1;j<=N;j++)
-    edges[index++]={i,j,dis()};*/
-    edges[0]={1,N-1,dis()};
+    edges[index++]={i,j,dis()};
+    /*edges[0]={1,N-1,dis()};
     for(int i=1;i<N-1;i++)
     edges[++index]={i,i+1,dis()};
     for(int i=1;i<N;i++)
-    edges[++index]={N,i,dis()};
+    edges[++index]={N,i,dis()};*/
     v.reserve(_M);
     for(auto &_:edges)
         v.emplace_back(UndirectedEdge<int, int>{{_.a,_.b},_.w});
@@ -108,16 +108,16 @@ auto q=std::max_element(v.begin(), v.end(), [](auto &l,auto &r){
 });
 auto m=std::max(q->edge.first,q->edge.second)+1;
 auto n=q->edge.first;
-std::vector<std::forward_list<std::pair<int, int>>> g(m);
+std::vector<std::vector<std::pair<int, int>>> g(m);
 for(auto &_:v)
 {
-    g[_.edge.first].emplace_front(std::pair<int, int>{_.edge.second,_.weight});
-    g[_.edge.second].emplace_front(std::pair<int, int>{_.edge.first,_.weight});
+    g[_.edge.first].emplace_back(std::pair<int, int>{_.edge.second,_.weight});
+    g[_.edge.second].emplace_back(std::pair<int, int>{_.edge.first,_.weight});
 }
 std::vector<table_entry<int, int>> table(m);
 table[n].d_v=0;
 auto t0=high_resolution_clock::now();
-    auto p(graph_algorithm::prim<true, false>(g, table, n));
+    auto p(graph_algorithm::prim<false, false,false>(g, table, n));
     auto t1=high_resolution_clock::now();
     std::cout<<"prim_yyk_example(time):"<<duration_cast<milliseconds>(t1-t0).count()<<"ms   "<<
     "result:"<<p.second<<'\n';
