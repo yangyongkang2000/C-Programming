@@ -1,3 +1,0 @@
-/Users/yangyongkang/Documents/C-Programming/ComplexPlot/GCC_AtomicOrbital/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/Users/yangyongkang/Documents/C-Programming/ComplexPlot/GCC_AtomicOrbital/cmake-build-release/CMakeFiles/edit_cache.dir
-/Users/yangyongkang/Documents/C-Programming/ComplexPlot/GCC_AtomicOrbital/cmake-build-release/CMakeFiles/GCC_AtomicOrbital.dir
