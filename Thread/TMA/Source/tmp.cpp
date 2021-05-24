@@ -46,6 +46,44 @@ inline unsigned char GR_BL(I i,I j) noexcept{
         return _k[2]*fabs(r.second);
 }
 }
+namespace spiral {
+static int _kk[3];
+template<typename I>
+unsigned char BL(I i,I j) noexcept {
+    i -= _kk[0]/ 2;
+    j -= _kk[1] / 2;
+    double theta = atan2(j,i);
+    double prc = theta / 3.14f / 2.0f;
+
+    I dist = sqrt(i*i + j*j);
+    I makeSpiral = prc * _kk[2] / 2;
+    I waves = sin(_cr(dist * dist)) * 32 + sin(theta * 10) * 64;
+    return dist + makeSpiral + waves;
+}
+template<typename I>
+unsigned char RD(I i,I j) noexcept {
+    return (_kk[0]+_kk[1])/2 - BL(2*i, 2*j);
+}
+template<typename I>
+unsigned char GR(I i,I j) noexcept {
+    return BL(j,i)+128;
+}
+}
+EXTERN_C DLLEXPORT int spiral_plot(WolframLibraryData libData, mint Argc, MArgument *Args, MArgument Res)
+{
+    auto tensor=MArgument_getMTensor(Args[0]);
+    auto data=libData->MTensor_getIntegerData(tensor);
+    std::copy(data, data+3, spiral::_kk);
+    auto width=data[0];
+    auto height=data[1];
+    auto imageFuns=libData->imageLibraryFunctions;
+    MImage image_out;
+    imageFuns->MImage_new2D(width,height,3,MImage_Type_Bit8,MImage_CS_RGB,True,&image_out);
+    raw_t_ubit8 *out=imageFuns->MImage_getByteData(image_out);
+    tmp_plot<true>(spiral::RD<mint>,spiral::GR<mint>,spiral::BL<mint>, out,(mint)0, height, width);
+    MArgument_setMImage(Res, image_out);
+    return LIBRARY_NO_ERROR;
+}
 EXTERN_C DLLEXPORT int swirly_plot(WolframLibraryData libData, mint Argc, MArgument *Args, MArgument Res)
 {
     mint width=MArgument_getInteger(Args[0]);
@@ -60,7 +98,6 @@ EXTERN_C DLLEXPORT int swirly_plot(WolframLibraryData libData, mint Argc, MArgum
 }
 EXTERN_C DLLEXPORT int lyapunov_plot(WolframLibraryData libData, mint Argc, MArgument *Args, MArgument Res)
 {
-    using namespace std;
     auto tensor=MArgument_getMTensor(Args[0]);
     auto data=libData->MTensor_getIntegerData(tensor);
     std::copy(data, data+4, lyapunov::_k);

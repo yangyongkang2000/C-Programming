@@ -13,6 +13,11 @@ inline constexpr T _sq(T const & x) noexcept
 {
     return x*x;
 }
+template<typename T>
+inline constexpr T _cr(T const &x) noexcept
+{
+    return pow(x, 1.0/3.0);
+}
 template<bool parallel,int M=2,int K=0,typename R,typename G,typename B,typename D,typename I>
 inline constexpr void tmp_plot(R r,G g,B b,D d,I h1,I h2,I w) noexcept
 {

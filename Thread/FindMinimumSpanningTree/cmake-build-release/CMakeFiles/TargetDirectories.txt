@@ -1,3 +1,0 @@
-/Users/yangyongkang/Documents/C-Programming/Thread/FindMinimumSpanningTree/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/Users/yangyongkang/Documents/C-Programming/Thread/FindMinimumSpanningTree/cmake-build-release/CMakeFiles/edit_cache.dir
-/Users/yangyongkang/Documents/C-Programming/Thread/FindMinimumSpanningTree/cmake-build-release/CMakeFiles/FindMinimumSpanningTree.dir
