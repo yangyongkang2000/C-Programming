@@ -67,7 +67,7 @@ t8.get();
 namespace FibonacciSequence {
     using ULL=unsigned long long int;
     using UL=unsigned long int;
-    constexpr ULL M[3]={0xF240,0x989680,0x5F5E100};
+    constexpr ULL M[3]={0xF4240,0x989680,0x5F5E100};
     constexpr UL ULL_Max[3]={0x11979AA,0x2D093,0x734};
     constexpr UL S[3]={4,3,3};
     template<int N,typename V>
