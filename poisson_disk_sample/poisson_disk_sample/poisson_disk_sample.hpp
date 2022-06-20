@@ -41,17 +41,16 @@ inline InputIt poisson_disk_sample(InputIt beg,InputIt end) noexcept
     };
     *beg=P{0.5,0.5};
     grid[(N/2)*(N+1)]=0;
-    auto head=0,tail=1;
     auto len=end-beg;
     std::random_device rd;
     std::default_random_engine gen(rd());
     std::uniform_real_distribution<T> dis(0,1);
     static std::array<std::pair<T,T>,Max_Retry> r_theta;  //add
     static std::array<std::pair<T,T>,Max_Retry> xy_l;  //add
-    while(head<tail)
+    auto tail=1;
+    for(auto head=0;head<tail;head++)
     {
         auto & p=*(beg+head);
-        head++;
         std::generate_n(r_theta.begin(), Max_Retry, [&]{return std::pair<T,T>{(dis(gen)+1)*r,dis(gen)*2*std::numbers::pi_v<T>};});
         std::transform(r_theta.begin(), r_theta.end(), xy_l.begin(), [&](auto &rt){return std::pair<T,T>{p[0]+rt.first*std::cos(rt.second),p[1]+rt.first*std::sin(rt.second)};});
         for(auto &[x,y]:xy_l)
@@ -64,22 +63,6 @@ inline InputIt poisson_disk_sample(InputIt beg,InputIt end) noexcept
                     if(tail>=len) return end;
                 }
             }
-        /*for(int _=0;_<Max_Retry;_++)
-        {
-            auto theta=dis(gen)*2*std::numbers::pi_v<T>;
-            auto tr=(dis(gen)+1)*r;
-            auto x=p[0]+tr*std::cos(theta);
-            if(x<0||x>=1) continue;
-            auto y=p[1]+tr*std::sin(theta);
-            if(y<0||y>=1) continue;
-            auto w=static_cast<int>(x*N);
-            auto h=static_cast<int>(y*N);
-            if(check(x,y,w,h)){
-                *(beg+tail)={x,y};
-                grid[h*N+w]=tail++;
-                if(tail>=len) return end;
-            }
-        }    */  //delete
     }
     return beg+tail;
 }
