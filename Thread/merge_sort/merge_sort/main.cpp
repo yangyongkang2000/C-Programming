@@ -10,10 +10,9 @@
 #include<random>
 #include<chrono>
 #include<array>
-
+#include<numeric>
 std::random_device rd;
-std::mt19937 gen(rd());
-std::uniform_real_distribution<> dis(0,100);
+std::default_random_engine gen(rd());
 constexpr auto i=10000000;
 std::vector<double> v(i);
 
@@ -23,11 +22,11 @@ using namespace std::chrono;
 template<bool parallel,bool s=false>
  int main()
 {
-     for(int j=0;j<i;j++)
-         v[j]=dis(gen);
+     std::iota(v.begin(),v.end(),1);
+     std::shuffle(v.begin(), v.end(), gen);
      auto t0=high_resolution_clock::now();
      if constexpr(s)
-         std::sort(v.begin(), v.end());
+         std::stable_sort(v.begin(), v.end());
      else
      yyk_demo::msort<parallel>(v.begin(),v.end());
      auto t1=high_resolution_clock::now();
@@ -55,14 +54,7 @@ inline void operator<<(OS &os,std::pair<T, T1> r)
             std::cout<<*(r.first);
 }
 int main(int argc, const char * argv[]) {
-    int p[]={3};
-    int q[]={-2,-1};
-    /*for(int i=0;i<13;i++)
-    {
-        std::cout<<yyk_demo::yyk_kth_element(p, p+7, q, q+6, i);
-        std::cout<<std::endl;
-    }*/
-    std::cout<<yyk_demo::return_result(yyk_demo::yyk_kth_element(p, p+1, q, q+2, 1));
-    std::cout<<std::endl;
-    return 0;
+    test::main<true>();
+    test::main<false>();
+    test::main<false,true>();
 }

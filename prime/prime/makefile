@@ -7,9 +7,9 @@ header:
 	wolframscript  -file prime_table.wl
 	mv prime_table.txt prime_table.hpp
 compile:
-	g++-10  -Ofast main.cpp -o main -std=c++17 -Wall -Wextra -march=native
+	g++  -Ofast main.cpp -o main -std=c++20 -Wall -Wextra -march=native
 main : prime.hpp main.cpp prime_table.hpp
-	g++-10  -Ofast main.cpp -o main -std=c++17 -Wall -Wextra -march=native
+	g++  -Ofast main.cpp -o main -std=c++20 -Wall -Wextra -march=native
 clean:
 	rm main prime_table.hpp
 _clean_: 

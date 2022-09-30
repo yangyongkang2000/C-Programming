@@ -65,7 +65,7 @@ template<typename T=ULL,T N,T M>
 inline T yyk_calc(const T L,const T R)
 {
     const T l=L&1?L:L+1;
-    const T r1=N-L+2;
+    const T r1=N-l+2;
     const T r=R&1?R:R+1;
     const T l1=N-r+2;
     const T delta=r-l;
